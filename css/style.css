@@ -533,6 +533,7 @@ a {
     flex-basis: 50%;
     width: 50%; }
     .section__right--opacity {
+      background-color: #333333;
       background-color: #333333bd;
       padding: 30px; }
     .section__right--max {
