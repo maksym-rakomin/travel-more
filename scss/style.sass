@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap');
+   
+
+@import 'normalize'
+@import 'mixins'
+@import 'variables'
+
+
+
+
+
+* 
+    box-sizing: border-box
+html 
+    height: 100%
+    font-size: 10px
+    scroll-behavior: smooth
+
+body 
+    min-height: 100%
+    font: 400 1.5rem/1.6 'Poppins', sans-serif
+    @include text($white, $josefin, $text-size, 400, 1.5)
+    background-color: #111
+
+a 
+    text-decoration: none
+    color: $white
+
+.container
+    max-width: 1110px
+    width: 96%
+    margin: 0 auto
+
+.brown
+    background-color: $brown
+.flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    &--ar
+        justify-content: space-around
+    &--end
+        justify-content: flex-end
+
+.center
+    text-align: center
+
+.btn
+    text-transform: uppercase
+    font-family: $aleo
+    color: $blue
+    background-color: $blue
+    opacity: 1
+    @include text($white, $aleo, 1.4rem, 400, 1.5)
+    padding: 15px 15px 15px 35px
+    display: flex
+    display: inline-blocks
+    align-items: center
+    border: 1px solid $blue
+    @include hover
+        background-color: $white
+        color: $blue
+        border-color: 
+    &--link
+        display: inline-block
+        padding: 15px 25px
+
+.header
+    min-height: 90vh
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 12%  5px  0 5px 
+    position: relative
+
+    &__title
+        @include text($white, $josefin, 4.8rem, 700, 1)
+        text-transform: uppercase
+        text-align: center
+        letter-spacing: 3px
+        margin-bottom: 25px
+        &--logo
+            text-align: left
+            font-size: 2.4rem
+            margin: 0
+        &--footer
+            text-align: center
+            font-size: 2.4rem
+
+    &__subtitle
+        text-align: center
+        @include text($white, $josefin, 2.2rem, 400, 1.5)
+        letter-spacing: 5px
+        &--footer
+            font-size: 1.8rem
+            letter-spacing: normal
+
+    &__form
+        background-color: $white
+        max-width: 650px
+        padding: 3px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        margin-top: 50px
+    
+    &__search
+        flex-basis: 78%
+        outline: none
+        border: none
+        padding: 0 10px
+        &::placeholder
+            text-align: center
+
+
+    &__svg
+        flex-basis: 25%
+        margin-left: 10px 
+        font-size: 20px
+        font-weight: 300
+    
+    &__scroller
+        width: 100px
+        height: 60px
+        display: block
+        text-align: center
+        position: absolute
+        bottom: 5%
+        left: 50%
+        transform: translateX(-50%)
+        cursor: pointer
+        &:hover .header__scroll
+            bottom: 10%
+
+
+    &__scroll
+        position: absolute
+        bottom: 40%
+        left: 50%
+        transition: all .3s ease
+        transform: translateX(-50%)
+
+
+
+
+
+.nav
+    background-color: $blue
+    min-height: 10vh
+    
+    &__items
+        padding: 0
+        margin: 0
+        text-transform: uppercase
+
+    &__item
+        display: inline-block
+
+    &__link
+        display: block
+        padding: 20px 0
+        margin-left: 20px
+        border-top: 4px solid transparent
+        border-bottom: 4px solid transparent
+        @include hover
+            border-color: $green
+
+    
+    &__logo-link
+        @include hover
+            color: $green
+
+
+.section
+    padding: 120px 0
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    &--brown
+        padding: 100px 0
+
+    &__left
+        width: 50%
+        flex-basis: 50%
+        &--mini
+            flex-basis: 20%
+
+
+    &__right
+        flex-basis: 50%
+        width: 50%
+        &--opacity
+            background-color: $brown--opacity
+            padding: 30px
+        &--max
+            flex-basis: 80%
+            background-color: #333333
+            padding: 5px 55px 
+
+    &__title
+        @include text($white, $aleo, 3.6rem, 400, 1)
+        margin-bottom: 60px
+
+    &__subtitle
+        @include text($white, $aleo, 3.6rem, 400, 1)
+        margin-top: 30px
+
+    &__name
+        @include text($white, $josefin, 2rem, 400, 1)
+        margin-bottom: 30px
+
+    &__place
+        @include text($white, $josefin, 2rem, 400, 1)
+        text-transform: uppercase
+        margin-bottom: 30px
+
+    &__img
+        width: 100%
+        height: 100%
+
+
+
+
+    &__text
+
+
+    &__wrap-img
+        text-align: left
+        &--right
+            text-align: right
+
+    &__box
+        text-align: center
+
+    &__blockquote
+        margin: 0
+        padding: 0
+
+
+
+    &__blockquote::first-letter        
+        margin-left: 40px
+
+
+    &__blockquote::before
+        content: "\201e"     
+        display: inline-block
+        font-size: 4rem
+        
+        line-height: 1
+        color: $blue
+           
+.footer
+    padding: 120px 0 50px
+
+.social
+    text-align: center
+    margin-top: 20px
+    & * 
+        margin: 0 5px
+        @include hover
+            color: $green
