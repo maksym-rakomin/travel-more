@@ -219,6 +219,7 @@ a
     &__img
         width: 100%
         height: 100%
+        font-size: 0
 
 
 
@@ -236,21 +237,20 @@ a
 
     &__blockquote
         margin: 0
-        padding: 0
+        padding: 5px
+        position: relative
+        &::before
+            font-family: 'FontAwesome'
+            content: '\f10d'
+            color: $blue
+            position: absolute
+            top: -5px
+            
 
 
 
     &__blockquote::first-letter        
-        margin-left: 40px
-
-
-    &__blockquote::before
-        content: "\201e"     
-        display: inline-block
-        font-size: 4rem
-        
-        line-height: 1
-        color: $blue
+        margin-left: 2.5rem
            
 .footer
     padding: 120px 0 50px

@@ -572,7 +572,8 @@ a {
     margin-bottom: 30px; }
   .section__img {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    font-size: 0; }
   .section__wrap-img {
     text-align: left; }
     .section__wrap-img--right {
@@ -581,15 +582,16 @@ a {
     text-align: center; }
   .section__blockquote {
     margin: 0;
-    padding: 0; }
+    padding: 5px;
+    position: relative; }
+    .section__blockquote::before {
+      font-family: 'FontAwesome';
+      content: '\f10d';
+      color: #5474fd;
+      position: absolute;
+      top: -5px; }
   .section__blockquote::first-letter {
-    margin-left: 40px; }
-  .section__blockquote::before {
-    content: "\201e";
-    display: inline-block;
-    font-size: 4rem;
-    line-height: 1;
-    color: #5474fd; }
+    margin-left: 2.5rem; }
 
 .footer {
   padding: 120px 0 50px; }
