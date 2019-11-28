@@ -31,8 +31,7 @@ a
     width: 96%
     margin: 0 auto
 
-.brown
-    background-color: $brown
+
 .flex
     display: flex
     justify-content: space-between
@@ -45,6 +44,9 @@ a
 
 .center
     text-align: center
+
+.relative
+    position: relative
 
 .btn
     text-transform: uppercase
@@ -179,6 +181,7 @@ a
     background-position: center
     &--brown
         padding: 100px 0
+        background-color: $brown
 
     &__left
         width: 50%
@@ -205,7 +208,7 @@ a
 
     &__subtitle
         @include text($white, $aleo, 3.6rem, 400, 1)
-        margin-top: 30px
+        margin: 30px 0 0
 
     &__name
         @include text($white, $josefin, 2rem, 400, 1)
@@ -224,9 +227,6 @@ a
 
 
 
-    &__text
-
-
     &__wrap-img
         text-align: left
         &--right
@@ -234,6 +234,16 @@ a
 
     &__box
         text-align: center
+        border-radius: 50%
+        > svg
+            background-color: $brown
+            width: 100px
+            height: 100px
+            text-align: center
+            padding: 20px
+
+            position: relative
+            z-index: 2
 
     &__blockquote
         margin: 0
@@ -261,4 +271,12 @@ a
     & * 
         margin: 0 5px
         @include hover
-            color: $green
+            color: $green   
+
+.dotted
+    width: 64%
+    height: 85px
+    position: absolute
+    background: center / contain url(../img/dotted.png) no-repeat
+    left: 50%
+    transform: translate(-51%, -124%)

@@ -336,9 +336,6 @@ a {
   width: 96%;
   margin: 0 auto; }
 
-.brown {
-  background-color: #333333; }
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,6 +357,9 @@ a {
 
 .center {
   text-align: center; }
+
+.relative {
+  position: relative; }
 
 .btn {
   text-transform: uppercase;
@@ -520,7 +520,8 @@ a {
   background-size: cover;
   background-position: center; }
   .section--brown {
-    padding: 100px 0; }
+    padding: 100px 0;
+    background-color: #333333; }
   .section__left {
     width: 50%;
     -ms-flex-preferred-size: 50%;
@@ -554,7 +555,7 @@ a {
     font-size: 3.6rem;
     font-weight: 400;
     line-height: 1;
-    margin-top: 30px; }
+    margin: 30px 0 0; }
   .section__name {
     color: #fff;
     font-family: "Josefin Sans", sans-serif;
@@ -579,7 +580,16 @@ a {
     .section__wrap-img--right {
       text-align: right; }
   .section__box {
-    text-align: center; }
+    text-align: center;
+    border-radius: 50%; }
+    .section__box > svg {
+      background-color: #333333;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 2; }
   .section__blockquote {
     margin: 0;
     padding: 5px;
@@ -606,3 +616,14 @@ a {
     transition: all 0.4s ease; }
     .social *:hover, .social *:focus, .social *:active {
       color: #38c695; }
+
+.dotted {
+  width: 64%;
+  height: 85px;
+  position: absolute;
+  background: center/contain url(../img/dotted.png) no-repeat;
+  left: 50%;
+  -webkit-transform: translate(-51%, -124%);
+  -ms-transform: translate(-51%, -124%);
+  -o-transform: translate(-51%, -124%);
+  transform: translate(-51%, -124%); }
