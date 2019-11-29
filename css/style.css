@@ -361,6 +361,9 @@ a {
 .relative {
   position: relative; }
 
+.brown {
+  background-color: #333333; }
+
 .btn {
   text-transform: uppercase;
   font-family: "Aleo", serif;
